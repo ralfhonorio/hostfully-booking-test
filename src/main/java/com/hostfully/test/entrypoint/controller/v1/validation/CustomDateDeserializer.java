@@ -16,6 +16,10 @@ public class CustomDateDeserializer
     private static DateTimeFormatter formatter
             = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
+    public CustomDateDeserializer() {
+        this(null);
+    }
+
     public CustomDateDeserializer(Class<?> vc) {
         super(vc);
     }
