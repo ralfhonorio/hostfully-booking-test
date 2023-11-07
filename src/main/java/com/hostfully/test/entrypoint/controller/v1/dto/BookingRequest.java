@@ -2,6 +2,7 @@ package com.hostfully.test.entrypoint.controller.v1.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.hostfully.test.entrypoint.controller.v1.validation.CustomDateDeserializer;
+import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -11,7 +12,10 @@ import java.util.UUID;
 public class BookingRequest {
 
     @JsonDeserialize(using = CustomDateDeserializer.class)
+    @FutureOrPresent
     private LocalDate startDate;
+
+    @FutureOrPresent
     @JsonDeserialize(using = CustomDateDeserializer.class)
     private LocalDate endDate;
 
