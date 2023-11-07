@@ -26,7 +26,7 @@ State diagram about booking process
 
 ### API documentation
 [Swagger/OpenAPI] http://localhost:8080/api/swagger-ui/index.html
-#### Colletion postman: 
+
 ## 🔧 Tools:
 
 * Spring
