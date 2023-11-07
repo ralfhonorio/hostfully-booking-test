@@ -1,8 +1,6 @@
 package com.hostfully.test.entrypoint.controller.v1.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.hostfully.test.core.domain.Status;
-import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
 import java.util.UUID;
@@ -14,23 +12,10 @@ public class BlockResponse {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date startDate;
 
-
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date endDate;
 
-    @NotNull
     private PropertyResponse property;
-
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
-    private Status status;
-
 
     public UUID getId() {
         return id;
@@ -63,5 +48,6 @@ public class BlockResponse {
     public void setProperty(PropertyResponse property) {
         this.property = property;
     }
+
 
 }

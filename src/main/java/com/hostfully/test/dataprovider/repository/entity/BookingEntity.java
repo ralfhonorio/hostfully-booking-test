@@ -75,12 +75,14 @@ public class BookingEntity {
     private PropertyEntity property;
 
 
+    @Column(name = "create_at")
     @CreationTimestamp
     private LocalDate createAt;
 
+
+    @Column(name = "update_at")
     @UpdateTimestamp
     private LocalDate updateAt;
-
     public UUID getId() {
         return id;
     }

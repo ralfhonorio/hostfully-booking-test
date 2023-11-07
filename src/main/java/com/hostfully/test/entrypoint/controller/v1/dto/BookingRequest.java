@@ -1,45 +1,46 @@
 package com.hostfully.test.entrypoint.controller.v1.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.validation.constraints.FutureOrPresent;
+
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 
 public class BookingRequest {
 
-    @NotNull
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @FutureOrPresent
-    private Date startDate;
+    private LocalDate startDate;
 
-    @NotNull
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @FutureOrPresent
-    private Date endDate;
+    private LocalDate endDate;
 
+    @NotBlank
     private String guestName;
 
+    @NotBlank
     private String guestEmail;
 
+    @NotBlank
     private String guestPhone;
 
+    @NotNull
     private UUID propertyId;
 
-    public Date getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 

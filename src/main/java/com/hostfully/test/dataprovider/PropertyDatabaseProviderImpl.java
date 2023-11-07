@@ -4,7 +4,6 @@ import com.hostfully.test.core.dataprovider.PropertyDatabaseProvider;
 import com.hostfully.test.core.domain.Property;
 import com.hostfully.test.dataprovider.repository.PropertyRepository;
 import com.hostfully.test.dataprovider.repository.dto.PropertyEntityMapper;
-import com.hostfully.test.dataprovider.repository.entity.PropertyEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -27,8 +26,4 @@ public class PropertyDatabaseProviderImpl implements PropertyDatabaseProvider {
         return propertyRepository.findById(id).map(propertyEntityMapper::toProperty);
     }
 
-    public void save(Property property) {
-        PropertyEntity bookingEntity = propertyEntityMapper.toPropertyEntity(property);
-        propertyRepository.save(bookingEntity);
-    }
 }

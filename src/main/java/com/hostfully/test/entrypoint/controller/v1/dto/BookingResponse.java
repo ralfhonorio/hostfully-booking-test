@@ -9,6 +9,12 @@ import java.util.UUID;
 public class BookingResponse {
     private UUID id;
 
+    private String guestName;
+
+    private String guestEmail;
+
+    private String guestPhone;
+
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date startDate;
 
@@ -16,7 +22,15 @@ public class BookingResponse {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date endDate;
 
-    private String guestName;
+    private Status status;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getGuestName() {
         return guestName;
@@ -42,21 +56,7 @@ public class BookingResponse {
         this.guestPhone = guestPhone;
     }
 
-    private String guestEmail;
-
-    private String guestPhone;
-
-    private Status status;
-
     private PropertyResponse property;
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     public Date getStartDate() {
         return startDate;

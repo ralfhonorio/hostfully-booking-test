@@ -17,7 +17,7 @@ public class BookingBeanConfig {
     }
 
     @Bean
-    public UpdateBookingUseCase updateBookingUseCase(BookingDatabaseProvider bookingDatabaseProvider,  PropertyDatabaseProvider propertyDatabaseProvider) {
+    public UpdateBookingUseCase updateBookingUseCase(BookingDatabaseProvider bookingDatabaseProvider, PropertyDatabaseProvider propertyDatabaseProvider) {
         return new UpdateBookingUseCaseImpl(bookingDatabaseProvider, propertyDatabaseProvider);
     }
 

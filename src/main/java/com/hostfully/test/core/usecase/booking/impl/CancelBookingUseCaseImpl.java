@@ -13,14 +13,12 @@ public class CancelBookingUseCaseImpl implements CancelBookingUseCase {
 
     private final BookingDatabaseProvider bookingDatabaseProvider;
 
-
     public CancelBookingUseCaseImpl(BookingDatabaseProvider bookingDatabaseProvider) {
         this.bookingDatabaseProvider = bookingDatabaseProvider;
     }
     @Override
     public Booking cancel(UUID id) throws DataNotFoundException {
         Optional<Booking> storedBooking = bookingDatabaseProvider.findById(id);
-
 
         if (storedBooking.isPresent()) {
             storedBooking.get().setStatus(Status.CANCELED);

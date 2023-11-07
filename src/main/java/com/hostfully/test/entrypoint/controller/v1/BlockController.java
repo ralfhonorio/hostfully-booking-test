@@ -104,6 +104,6 @@ public class BlockController {
             throw new DataNotFoundException("Block not found");
         }
         BlockResponse blockResponse = blockMapper.toBlockResponse(optionalBlock.get());
-        return ResponseEntity.ok(blockResponse);
+        return new ResponseEntity<>(blockResponse, HttpStatus.OK);
     }
 }

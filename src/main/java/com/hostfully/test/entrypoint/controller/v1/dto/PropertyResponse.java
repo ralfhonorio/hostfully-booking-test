@@ -1,6 +1,7 @@
 package com.hostfully.test.entrypoint.controller.v1.dto;
 
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 public class PropertyResponse {
@@ -13,7 +14,7 @@ public class PropertyResponse {
 
     private String phone;
 
-    private Long valuePerDay;
+    private BigDecimal valuePerDay;
 
 
     public UUID getId() {
@@ -48,11 +49,11 @@ public class PropertyResponse {
         this.phone = phone;
     }
 
-    public Long getValuePerDay() {
+    public BigDecimal getValuePerDay() {
         return valuePerDay;
     }
 
-    public void setValuePerDay(Long valuePerDay) {
+    public void setValuePerDay(BigDecimal valuePerDay) {
         this.valuePerDay = valuePerDay;
     }
 }

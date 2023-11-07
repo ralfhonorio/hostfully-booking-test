@@ -5,15 +5,10 @@ import java.util.UUID;
 public class Property {
 
     private UUID id;
-
     private String name;
-
     private String address;
-
     private String phone;
-
     private Long valuePerDay;
-
     private Status status;
 
     public UUID getId() {

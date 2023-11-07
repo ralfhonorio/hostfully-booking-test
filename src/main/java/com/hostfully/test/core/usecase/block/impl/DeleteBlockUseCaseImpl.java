@@ -12,7 +12,6 @@ public class DeleteBlockUseCaseImpl implements DeleteBlockUseCase {
     public DeleteBlockUseCaseImpl(BlockDatabaseProvider blockDatabaseProvider) {
         this.blockDatabaseProvider = blockDatabaseProvider;
     }
-
     @Override
     public void delete(UUID id) {
         blockDatabaseProvider.delete(id);

@@ -16,6 +16,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +26,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/v1/bookings")
+@Validated
 public class BookingController {
 
     private final CreateBookingUseCase createBookingUseCase;
@@ -106,7 +108,7 @@ public class BookingController {
             throw new DataNotFoundException("Booking not found");
         }
         BookingResponse bookingResponse = bookingMapper.toBookingResponse(optionalBooking.get());
-        return ResponseEntity.ok(bookingResponse);
+        return new ResponseEntity<>(bookingResponse, HttpStatus.OK);
     }
 
 }

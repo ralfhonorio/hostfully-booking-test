@@ -8,11 +8,9 @@ import java.util.UUID;
 
 public class BlockRequest {
 
-    @NotNull
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
 
-    @NotNull
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
 

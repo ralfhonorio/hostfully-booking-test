@@ -23,7 +23,7 @@ public interface BlockDatabaseProvider {
 
     void delete(UUID id);
 
-    Optional<Block> findConflictingBlock( UUID propertyId, LocalDate startDate, LocalDate endDate);
+    Optional<Block> findConflictingBlock(UUID propertyId, LocalDate startDate, LocalDate endDate);
 
 
 }

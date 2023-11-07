@@ -8,11 +8,8 @@ public class Block {
     UUID id;
     LocalDate startDate;
     LocalDate endDate;
-
     private Property property;
-
     private Status status;
-
     private Date createAt;
 
     public UUID getId() {
@@ -39,20 +36,12 @@ public class Block {
         this.endDate = endDate;
     }
 
-
     public Property getProperty() {
         return property;
     }
 
     public void setProperty(Property property) {
         this.property = property;
-    }
-    public Date getCreateAt() {
-        return createAt;
-    }
-
-    public void setCreateAt(Date createAt) {
-        this.createAt = createAt;
     }
 
     public Status getStatus() {
@@ -61,6 +50,14 @@ public class Block {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public Date getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
     }
 
 }

@@ -15,9 +15,7 @@ public class CreateBlockUseCaseImpl implements CreateBlockUseCase {
 
     private final BlockDatabaseProvider blockDatabaseProvider;
     private final PropertyDatabaseProvider propertyDatabaseProvider;
-
     private final ValidateBookingAvailabilityUseCase validateBookingAvailabilityUseCase;
-
 
     public CreateBlockUseCaseImpl(BlockDatabaseProvider blockDatabaseProvider, PropertyDatabaseProvider propertyDatabaseProvider, ValidateBookingAvailabilityUseCase validateBookingAvailabilityUseCase) {
         this.blockDatabaseProvider = blockDatabaseProvider;

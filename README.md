@@ -43,6 +43,7 @@ Some prerequisites for you to upload the environment locally.
 
 * Download and install [JDK 17](https://adoptium.net/temurin/releases/)
 * Download your preferred IDE
+awer* Download all dependencies with Gradle and start application
 
 ### 🔧 Environment Configuration
 

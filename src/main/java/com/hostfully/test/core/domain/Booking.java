@@ -11,7 +11,7 @@ public class Booking {
     private LocalDate endDate;
     private String guestName;
     private String guestEmail;
-    private  String guestPhone;
+    private String guestPhone;
     private Property property;
     private Status status;
     private LocalDate createAt;

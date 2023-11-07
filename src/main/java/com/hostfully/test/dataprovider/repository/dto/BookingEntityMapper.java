@@ -7,9 +7,7 @@ import org.mapstruct.Mapper;
 @Mapper( componentModel = "spring")
 public interface BookingEntityMapper {
 
-
     Booking toBooking(BookingEntity bookingEntity);
-
 
     BookingEntity toBookingEntity(Booking booking);
 }

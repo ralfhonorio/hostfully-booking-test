@@ -9,6 +9,4 @@ public interface PropertyDatabaseProvider {
 
     Optional<Property> findById(UUID id);
 
-    void save(Property property);
-
 }

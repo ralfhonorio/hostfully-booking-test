@@ -28,9 +28,12 @@ public class BlockEntity {
     private PropertyEntity property;
 
 
+    @Column(name = "create_at")
     @CreationTimestamp
     private LocalDate createAt;
 
+
+    @Column(name = "update_at")
     @UpdateTimestamp
     private LocalDate updateAt;
 

@@ -15,6 +15,8 @@ CREATE TABLE booking (
                          guest_phone VARCHAR(20),
                          property_id UUID,
                          status VARCHAR(10),
+                         create_at DATE,
+                         update_at DATE,
                          FOREIGN KEY (property_id) REFERENCES property(id)
 
 );
@@ -24,6 +26,8 @@ CREATE TABLE block (
                        start_date DATE,
                        end_date DATE,
                        property_id UUID,
+                       create_at DATE,
+                       update_at DATE,
                        FOREIGN KEY (property_id) REFERENCES property(id)
 );
 

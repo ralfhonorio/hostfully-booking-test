@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -24,7 +25,7 @@ public class PropertyEntity {
     private String phone;
 
     @Column(name = "value_per_day")
-    private String valuePerDay;
+    private BigDecimal valuePerDay;
 
     public UUID getId() {
         return id;
@@ -58,11 +59,11 @@ public class PropertyEntity {
         this.phone = phone;
     }
 
-    public String getValuePerDay() {
+    public BigDecimal getValuePerDay() {
         return valuePerDay;
     }
 
-    public void setValuePerDay(String valuePerDay) {
+    public void setValuePerDay(BigDecimal valuePerDay) {
         this.valuePerDay = valuePerDay;
     }
 
