@@ -29,6 +29,7 @@ State diagram about booking process
 #### Colletion postman: 
 ## 🔧 Tools:
 
+* Spring
 * Java 17
 * Gradle
 * Mapstruct
@@ -42,8 +43,10 @@ State diagram about booking process
 Some prerequisites for you to upload the environment locally.
 
 * Download and install [JDK 17](https://adoptium.net/temurin/releases/)
-* Download your preferred IDE
-awer* Download all dependencies with Gradle and start application
+* Download your preferred IDE 
+* Download all dependencies with Gradle and start application
+* Database structure automatically rises and inserts values into the property table
+* Collections postman inside resources folder for test [hotelfully.postman_collection.json](src%2Fmain%2Fresources%2Fhotelfully.postman_collection.json)
 
 ### 🔧 Environment Configuration
 

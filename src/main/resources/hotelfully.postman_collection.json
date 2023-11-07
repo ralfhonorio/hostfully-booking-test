@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "a56fd5f5-7a8b-4c85-8973-9d067010d0fa",
+		"name": "hotelfully",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1416034"
+	},
+	"item": [
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "get all bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2023-10-10\",\n    \"endDate\": \"2023-10-20\",\n    \"propertyId\": \"1f2c87a9-4c35-4cf4-8e4b-5a7d2c96c2a1\",\n    \"guestName\": \"John Doe 3\",\n    \"guestEmail\": \"test@test.com\",\n    \"guestPhone\": \"(123)456-7890\"\n        \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update booking",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2023-11-26\",\n    \"endDate\": \"2023-11-26\",\n    \"propertyId\": \"1f2c87a9-4c35-4cf4-8e4b-5a7d2c96c2a1\",\n    \"guestName\": \"John Doe updated\",\n    \"guestEmail\": \"test@test.com.br updated\",\n    \"guestPhone\": \"(123)456-7891\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/bookings/7eb51cd7-90b7-4f30-8a35-6556e4fe414d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"7eb51cd7-90b7-4f30-8a35-6556e4fe414d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete booking",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/bookings/dfb8ff78-596a-4574-ace5-b3a5bd4a9ab4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"dfb8ff78-596a-4574-ace5-b3a5bd4a9ab4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get booking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/bookings/dfb8ff78-596a-4574-ace5-b3a5bd4a9ab4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"dfb8ff78-596a-4574-ace5-b3a5bd4a9ab4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "block",
+			"item": [
+				{
+					"name": "get all block",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/blocks",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"blocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save block",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2023-111-10\",\n    \"endDate\": \"2023-12-12\",\n    \"propertyId\": \"1f2c87a9-4c35-4cf4-8e4b-5a7d2c96c2a1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/blocks",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"blocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update block",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2023-11-10\",\n    \"endDate\": \"2023-11-20\",\n    \"propertyId\": \"1f2c87a9-4c35-4cf4-8e4b-5a7d2c96c2a1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/blocks/b54ef9e3-72f2-4599-9f44-9e747ea346fc",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"blocks",
+								"b54ef9e3-72f2-4599-9f44-9e747ea346fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete block",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/blocks/244d4843-a3b1-4db9-aa0a-ec739210df32",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"blocks",
+								"244d4843-a3b1-4db9-aa0a-ec739210df32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get block",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/blocks/b54ef9e3-72f2-4599-9f44-9e747ea346fc",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"blocks",
+								"b54ef9e3-72f2-4599-9f44-9e747ea346fc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
