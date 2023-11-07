@@ -1,6 +1,7 @@
 package com.hostfully.test.entrypoint.controller.v1.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.hostfully.test.entrypoint.controller.v1.validation.CustomDateDeserializer;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
@@ -8,10 +9,10 @@ import java.util.UUID;
 
 public class BlockRequest {
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private LocalDate startDate;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private LocalDate endDate;
 
     @NotNull

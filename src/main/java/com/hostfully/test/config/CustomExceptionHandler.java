@@ -2,6 +2,7 @@ package com.hostfully.test.config;
 
 import com.hostfully.test.core.domain.exceptions.BookingNotAvailableException;
 import com.hostfully.test.core.domain.exceptions.DataNotFoundException;
+import com.hostfully.test.core.domain.exceptions.DateFormatException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -55,5 +56,13 @@ public class CustomExceptionHandler {
         List<String> errors = Collections.singletonList(ex.getMessage());
         return new ResponseEntity<>(getErrorsMap(errors), new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ExceptionHandler(DateFormatException.class)
+    public final ResponseEntity<Map<String, List<String>>> handleGeneralExceptions(DateFormatException ex) {
+        List<String> errors = Collections.singletonList(ex.getMessage());
+        return new ResponseEntity<>(getErrorsMap(errors), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+    }
+
+
 
 }
