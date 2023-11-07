@@ -15,8 +15,14 @@ Please refer to the included architecture image for a visual representation of t
 ### Arch approach
 ![Architecture Image](./src/main/resources/static/img/arch.png)
 
+References: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 ### MER Database
-![Datanase Image](./src/main/resources/static/img/mer_diagram.png)
+![Datanase Image](./src/main/resources/static/img/mer.png)
+
+### State Diagram
+State diagram about booking process
+
+![Datanase Image](./src/main/resources/static/img/state-diagram.png)
 
 ### API documentation
 [Swagger/OpenAPI] http://localhost:8080/api/swagger-ui/index.html
@@ -43,5 +49,5 @@ Some prerequisites for you to upload the environment locally.
 Start by cloning this project
 
 ```
-git clone git@bitbucket.org:valid-sa/<project>.git
+https://github.com/ralfhonorio/hostfully-booking-test
 

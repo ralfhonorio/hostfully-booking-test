@@ -1,7 +1,7 @@
 CREATE TABLE property (
                           id UUID PRIMARY KEY,
-                          name VARCHAR(50),
-                          address VARCHAR(200),
+                          name VARCHAR(255),
+                          address VARCHAR(255),
                           phone VARCHAR(20),
                           value_per_day NUMERIC (10)
 );
@@ -10,7 +10,7 @@ CREATE TABLE booking (
                          id UUID PRIMARY KEY,
                          start_date DATE,
                          end_date DATE,
-                         guest_name VARCHAR(50),
+                         guest_name VARCHAR(255),
                          guest_email VARCHAR(100),
                          guest_phone VARCHAR(20),
                          property_id UUID,
